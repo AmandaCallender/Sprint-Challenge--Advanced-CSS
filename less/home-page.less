@@ -1,15 +1,11 @@
 // Home Content
 
 .home {
-  @media (max-width: 500px) {
-    .phone();
+  @media @phone {
+    .phone(column);
   }
 
   .intro {
-    @media (max-width: 500px) {
-      .phone();
-    }
-
     h2 {
       padding: 15px;
     }
@@ -17,36 +13,48 @@
     p {
       padding: 0 15px;
     }
+    @media @phone {
+      .phone(column);
+    }
+
+    img {
+      @media @phone {
+        .phone(column);
+        width: 100%;
+      }
+    }
   }
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    @media (max-width: 500px) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    @media @phone {
+      .phone(column);
+      :nth-child(2) {
+        display: none;
+      }
+      :last-child {
+        display: none;
+      }
     }
 
     img {
-      @media (max-width: 500px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone {
+        width: 90%;
+      }
     }
   }
 
   .visit-planets {
     padding: 15px;
-
+    @media @phone {
+      .phone(column);
+    }
     h3 {
       margin-top: 11px;
     }
@@ -63,9 +71,18 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      .phone(column-reverse);
+      flex-wrap: wrap;
+    }
+
     .walk-text {
       width: 50%;
 
+      @media @phone {
+        .phone(column);
+        width: 100%;
+      }
       h3 {
         margin-bottom: 10px;
       }
@@ -82,11 +99,18 @@
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @phone {
+        .phone(column);
+        flex-wrap: flex;
+      }
 
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+        @media @phone {
+          width: auto;
+        }
       }
     }
   }
@@ -98,9 +122,15 @@
   justify-content: center;
   align-items: center;
   padding: 2%;
+  @media @phone {
+    .phone(column);
+  }
 
   h2 {
     padding-bottom: 1%;
+    @media @phone {
+      text-align: center;
+    }
   }
 }
 
@@ -116,11 +146,8 @@
   max-width: 1000px;
   background-color: @nav-bg;
   align-items: center;
-  @media (max-width: 500px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  @media @phone {
+    .phone(column);
   }
 
   h1 {

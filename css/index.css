@@ -18,12 +18,6 @@
   background-color: #f6f7f8;
   color: #22283a;
 }
-.phone {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -194,7 +188,7 @@ nav a {
   padding-right: 20px;
 }
 footer {
-  color: #22283B;
+  color: #22283b;
   background: #f4f4f4;
   padding: 20px 0;
   border: 1px double #e0e0e0;
@@ -204,15 +198,17 @@ footer {
   align-items: center;
 }
 @media (max-width: 500px) {
-  .home {
+  footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 100%;
+    padding-right: 100%;
   }
 }
 @media (max-width: 500px) {
-  .home .intro {
+  .home {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -224,6 +220,23 @@ footer {
 }
 .home .intro p {
   padding: 0 15px;
+}
+@media (max-width: 500px) {
+  .home .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .home .intro img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }
 .home .space-images {
   display: flex;
@@ -237,6 +250,12 @@ footer {
     justify-content: center;
     align-items: center;
   }
+  .home .space-images :nth-child(2) {
+    display: none;
+  }
+  .home .space-images :last-child {
+    display: none;
+  }
 }
 .home .space-images img {
   width: 28%;
@@ -246,14 +265,19 @@ footer {
 }
 @media (max-width: 500px) {
   .home .space-images img {
+    width: 90%;
+  }
+}
+.home .visit-planets {
+  padding: 15px;
+}
+@media (max-width: 500px) {
+  .home .visit-planets {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-}
-.home .visit-planets {
-  padding: 15px;
 }
 .home .visit-planets h3 {
   margin-top: 11px;
@@ -268,8 +292,26 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
@@ -285,10 +327,24 @@ footer {
   width: 46%;
   margin-left: 4%;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: flex;
+  }
+}
 .home .walk .walk-img img {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img img {
+    width: auto;
+  }
 }
 .form {
   display: flex;
@@ -297,8 +353,21 @@ footer {
   align-items: center;
   padding: 2%;
 }
+@media (max-width: 500px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .form h2 {
   padding-bottom: 1%;
+}
+@media (max-width: 500px) {
+  .form h2 {
+    text-align: center;
+  }
 }
 .top {
   display: flex;
